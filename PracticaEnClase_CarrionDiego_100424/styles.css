@@ -1,43 +1,65 @@
-﻿body {
+﻿/* Estilos generales */
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+h1 {
     text-align: center;
 }
 
-nav ul {
+.operacion {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+ul {
     list-style-type: none;
     padding: 0;
 }
 
-    nav ul li {
-        display: inline;
-        margin-right: 20px;
-    }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-            nav ul li a:hover {
-                color: #ff0; /* Cambia el color al pasar el mouse */
-            }
-
-section {
-    padding: 20px;
+li {
+    color: #333;
 }
 
-footer {
-    background-color: #333;
+/* Estilos para los botones */
+button {
+    background-color: #007bff;
     color: #fff;
-    padding: 10px 20px;
-    text-align: center;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para la sección de ejemplos */
+.ejemplos {
+    display: none;
+    margin-top: 10px;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
