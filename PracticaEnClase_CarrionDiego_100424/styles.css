@@ -5,6 +5,30 @@ body {
     padding: 0;
 }
 
+@media screen and (max-width: 715px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        margin-bottom: 10px; /* Agrega separación entre h1 y nav */
+    }
+
+    nav {
+        text-align: center; /* Centra los elementos del nav horizontalmente */
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0 5px; /* Añade un pequeño margen entre los elementos del nav */
+    }
+}
 
 
 .container {
