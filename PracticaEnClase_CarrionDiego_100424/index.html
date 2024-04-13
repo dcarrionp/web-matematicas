@@ -1,70 +1,99 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="indexjs.js"></script>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Operaciones Matemáticas</h1>
-
-    <!-- Suma -->
-    <div class="operacion">
-        <h2>Suma</h2>
-        <p>La suma es una operación matemática en la que se combina dos o más números para obtener un resultado total.</p>
-        <button onclick="toggleEjemplos('suma')">Ver Ejemplos</button>
-        <div id="ejemplosSuma" class="ejemplos">
-            <p>Ejemplos:</p>
-            <ul>
-                <li>2 + 3 = 5</li>
-                <li>5 + 7 = 12</li>
-            </ul>
+    <!-- Encabezado y Barra de Navegación -->
+    <header>
+        <div class="container">
+            <h1>Calculadora</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#operaciones">Operaciones Básicas</a></li>
+                    <li><a href="#calculadora">Calculadora</a></li>
+                    <li><a href="#nosotros">Sobre Nosotros</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <!-- Resta -->
-    <div class="operacion">
-        <h2>Resta</h2>
-        <p>La resta es una operación matemática en la que se quita una cantidad de otra.</p>
-        <button onclick="toggleEjemplos('resta')">Ver Ejemplos</button>
-        <div id="ejemplosResta" class="ejemplos">
-            <p>Ejemplos:</p>
-            <ul>
-                <li>10 - 5 = 5</li>
-                <li>8 - 3 = 5</li>
-            </ul>
+    <!-- Sección Principal para las Operaciones Matemáticas -->
+    <section id="operaciones" class="section">
+        <h2>Operaciones Matemáticas</h2>
+        <div class="operacion">
+            <h2>Suma</h2>
+            <p>La suma es una operación matemática en la que se combina dos o más números para obtener un resultado total.</p>
+            <button class="toggleButton" data-target="ejemplosSuma">Ver Ejemplos</button>
+            <div id="ejemplosSuma" class="ejemplos">
+                <p>Ejemplos:</p>
+                2 + 3 = 5<br>5 + 7 = 12
+            </div>
         </div>
-    </div>
 
-    <!-- Multiplicación -->
-    <div class="operacion">
-        <h2>Multiplicación</h2>
-        <p>La multiplicación es una operación matemática en la que se repite la suma de un número un cierto número de veces.</p>
-        <button onclick="toggleEjemplos('multiplicacion')">Ver Ejemplos</button>
-        <div id="ejemplosMultiplicacion" class="ejemplos">
-            <p>Ejemplos:</p>
-            <ul>
-                <li>3 * 4 = 12</li>
-                <li>5 * 2 = 10</li>
-            </ul>
+        <!-- Subsección para Resta -->
+        <div class="operacion">
+            <h2>Resta</h2>
+            <p>La resta es una operación matemática en la que se quita una cantidad de otra.</p>
+            <button class="toggleButton" data-target="ejemplosResta">Ver Ejemplos</button>
+            <div id="ejemplosResta" class="ejemplos">
+                <p>Ejemplos:</p>
+                2 - 3 = -1<br>10 - 7 = 3
+            </div>
         </div>
-    </div>
 
-    <!-- División -->
-    <div class="operacion">
-        <h2>División</h2>
-        <p>La división es una operación matemática en la que se divide un número en partes iguales.</p>
-        <button onclick="toggleEjemplos('division')">Ver Ejemplos</button>
-        <div id="ejemplosDivision" class="ejemplos">
-            <p>Ejemplos:</p>
-            <ul>
-                <li>10 ÷ 2 = 5</li>
-                <li>20 ÷ 4 = 5</li>
-            </ul>
+        <!-- Subsección para Multiplicación -->
+        <div class="operacion">
+            <h2>Multiplicación</h2>
+            <p>La multiplicación es una operación matemática en la que se repite la suma de un número un cierto número de veces.</p>
+            <button class="toggleButton" data-target="ejemplosMultiplicacion">Ver Ejemplos</button>
+            <div id="ejemplosMultiplicacion" class="ejemplos">
+                <p>Ejemplos:</p>
+                2 * 3 = 6<br>5 * 7 = 35
+            </div>
         </div>
-    </div>
+
+        <!-- Subsección para División -->
+        <div class="operacion">
+            <h2>División</h2>
+            <p>La división es una operación matemática en la que se divide un número en partes iguales.</p>
+            <button class="toggleButton" data-target="ejemplosDivision">Ver Ejemplos</button>
+            <div id="ejemplosDivision" class="ejemplos">
+                <p>Ejemplos:</p>
+                10 / 2 = 5<br>14 + 7 = 2
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Sección de la Calculadora -->
+    <section id="calculadora" class="section">
+        <h2>Calculadora</h2>
+        <div class="calculator">
+            <input type="text" id="display" readonly>
+            <div class="buttons">
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('+')">+</button>
+                <!-- Agrega más botones para otros números y operaciones -->
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="calculate()">=</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer id="nosotros">
+        <div class="footer">
+            <p>© 2024 Calculadora. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
