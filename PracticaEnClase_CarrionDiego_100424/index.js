@@ -2,7 +2,14 @@
 function toggleExamples(targetId) {
     var target = document.getElementById(targetId);
     target.classList.toggle("show");
+
+    if (target.classList.contains("show")) {
+        target.style.maxHeight = target.scrollHeight + "px";
+    } else {
+        target.style.maxHeight = null; 
+    }
 }
+
 
 var toggleButtons = document.querySelectorAll(".toggleButton");
 toggleButtons.forEach(function (button) {

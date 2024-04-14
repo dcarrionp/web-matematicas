@@ -89,13 +89,16 @@ footer {
 }
 
 .ejemplos {
-    display: none;
+    opacity: 0; 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.3s ease, opacity 0.3s ease; 
 }
 
-    .ejemplos.show {
-        display: block;
-    }
-
+.show {
+    max-height: 1000px; 
+    opacity: 1; 
+}
 .toggleButton {
     cursor: pointer;
     background-color: #CCE3DE;
